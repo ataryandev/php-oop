@@ -7,4 +7,6 @@ $worker->work();
 
 
 $developer = new \App\Developer("John", 30, [10, 15]);
+$developer->setSalary('$2500');
+var_dump($developer->getSalary());
 $developer->work();
