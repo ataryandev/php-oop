@@ -1,13 +1,16 @@
 <?php
 
 namespace App;
+require_once 'Traits/NotificationTrait.php';
 
 class Developer extends Worker
 {
+    use \Notification;
     protected string $salary;
 
     public function work(){
-        echo "Developer Working!";
+        echo "Developer Working! <br />" ;
+        $this->send();
     }
 
     /**
